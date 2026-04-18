@@ -2,3 +2,4 @@ pydantic
 pdfplumber
 openai
 python-docx
+python-dotenv
