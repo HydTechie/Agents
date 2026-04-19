@@ -15,8 +15,11 @@ for file in os.listdir(INPUT_DIR):
     pdf_path = os.path.join(INPUT_DIR, file)
     pdf_name = file.replace(".pdf", "")
 
+    print(f"[main] Processing PDF: {pdf_name}")
     text = extract_text(pdf_path)
+    print(f"[main] Extracted text length: {len(text):,} characters")
     flows = extract_flows(text)
+    print(f"[main] Extracted flows: {len(flows)}")
 
     pdf_flows = []
 

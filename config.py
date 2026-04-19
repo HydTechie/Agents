@@ -1,9 +1,11 @@
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") 
-MODEL = "gpt-4o-mini"
+# One-time fixed runtime config (no .env lookup).
+# If needed later, edit these values directly here.
+OLLAMA_BASE_URL = "http://127.0.0.1:11434"
+OLLAMA_MODEL = "llama3.2:latest"
+# Seconds to wait for one /api/chat response.
+OLLAMA_TIMEOUT = 300
+# Max characters of PDF text sent per request.
+OLLAMA_MAX_INPUT_CHARS = 8000
 
 INPUT_DIR = "input_pdfs"
 OUTPUT_PUML = "output/puml"
